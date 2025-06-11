@@ -22,14 +22,6 @@ class Tapmssql(SQLTap):
     default_stream_class = MSSQLStream
     default_output = sys.stdout.buffer
 
-    def get_env_prefix(self) -> str:
-        """Get the environment variable prefix for the tap.
-        
-        Returns:
-            The environment variable prefix.
-        """
-        return "TAP_MSSQL_NEW_"
-
     config_jsonschema = th.PropertiesList(
         th.Property(
             "dialect",
